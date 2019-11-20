@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LocationService } from './services/location.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'data';
+  constructor(public loc:LocationService){
+
+  }
 }
+

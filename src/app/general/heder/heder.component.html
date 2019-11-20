@@ -1,0 +1,10 @@
+<div>
+        <ul>
+            <li (click)='loc.chngeloc("homeepage")' [ngClass]="loc.location=='homeepage'?'active':''">homeepage</li>
+            <li (click)='loc.chngeloc("todo")' [ngClass]="loc.location=='todo'?'active':''">todo</li>
+            <li (click)='loc.chngeloc("posts")' [ngClass]="loc.location=='posts'?'active':''">posts</li>
+            <li (click)='loc.chngeloc("album")' [ngClass]="loc.location=='album'?'active':''">album</li>
+            <li (click)='loc.chngeloc("comment")' [ngClass]="loc.location=='comment'?'active':''">comment</li>
+
+       </ul>
+</div>
