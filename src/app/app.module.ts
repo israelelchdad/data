@@ -10,6 +10,7 @@ import { UserComponent } from './comps/pages/user/user.component';
 import { CommentComponent } from './comps/pages/comment/comment.component';
 import { TodoComponent } from './comps/pages/todo/todo.component';
 import { HederComponent } from './general/heder/heder.component';
+import { FormsModule } from  '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HederComponent } from './general/heder/heder.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
     
   ],
   providers: [],

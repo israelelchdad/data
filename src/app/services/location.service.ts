@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LocationService {
-  location:string ="homeepage"
+  location:string ="login";
+ 
+  user:string
 
   constructor() { }
 

@@ -7,12 +7,17 @@ import { LocationService } from '../../services/location.service';
   styleUrls: ['./heder.component.css']
 })
 export class HederComponent implements OnInit {
+  user:string=''
+
 
   constructor(public loc:LocationService) {
    
+   
    }
+   
 
   ngOnInit() {
+    this.user=this.loc.user
   }
 
 }

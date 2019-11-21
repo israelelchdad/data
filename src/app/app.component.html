@@ -1,5 +1,6 @@
-<app-heder></app-heder>
 
+<app-login *ngIf='loc.location=="login"'></app-login>
+<app-heder  *ngIf='loc.location!=="login"' ></app-heder>
 <app-homepage *ngIf='loc.location=="homeepage"'></app-homepage> 
 <app-comment *ngIf='loc.location=="comment"' ></app-comment>
 <app-album *ngIf='loc.location=="album"'></app-album>

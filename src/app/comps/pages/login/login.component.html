@@ -1,10 +1,15 @@
 
 <div>
     <label for="user">user</label>
-    <input id="user"><br>
+    <input  [(ngModel)]="user"><br>
     <label for="pass">pass</label>
-    <input id="pass"><br>
-    <button> next</button>
+    <input  [(ngModel)]="pass"><br>
+   
+    <label for="user">user</label>
+    <input  [(ngModel)]="user"><br>
+    <label for="pass">pass</label>
+    <input  [(ngModel)]="pass"><br>
+    <button (click)='login()'> login</button>
 
 
 
