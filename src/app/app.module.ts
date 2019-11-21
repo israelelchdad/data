@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './comps/pages/login/login.component';
 import { HomepageComponent } from './comps/pages/homepage/homepage.component';
@@ -24,7 +24,9 @@ import { HederComponent } from './general/heder/heder.component';
     HederComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
