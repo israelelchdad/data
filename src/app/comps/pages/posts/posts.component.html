@@ -1,8 +1,11 @@
 <p>posts works!</p>
 <ul>
 
-    <li>
-    {{posts[0].id}}
+    <li *ngFor= "let p of posts">
+        id=  {{p.id}} <br>
+       userid={{p.userId}} <br>
+       title={{p.title}} <br>
+        body= {{p.body}} <br>
 
     </li>
 </ul>

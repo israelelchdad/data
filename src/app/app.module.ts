@@ -11,6 +11,7 @@ import { CommentComponent } from './comps/pages/comment/comment.component';
 import { TodoComponent } from './comps/pages/todo/todo.component';
 import { HederComponent } from './general/heder/heder.component';
 import { FormsModule } from  '@angular/forms';
+import { PhotosComponent } from './comps/photos/photos.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from  '@angular/forms';
     UserComponent,
     CommentComponent,
     TodoComponent,
-    HederComponent
+    HederComponent,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,
