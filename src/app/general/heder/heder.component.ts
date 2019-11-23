@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LocationService } from '../../services/location.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { LocationService } from '../../services/location.service';
   styleUrls: ['./heder.component.css']
 })
 export class HederComponent implements OnInit {
-  user:string=''
+  @Input() user:string=''
 
 
   constructor(public loc:LocationService) {
@@ -17,7 +17,7 @@ export class HederComponent implements OnInit {
    
 
   ngOnInit() {
-    this.user=this.loc.user
+     this.user=this.loc.user
   }
 
 }

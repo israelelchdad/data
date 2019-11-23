@@ -1,1 +1,22 @@
 <p>homepage</p>
+
+<ul>
+        <li  *ngFor="let phot of photos" >
+           
+             <div> {{phot.id}}-{{phot.title}}
+            <img src="{{phot.url}}" alt="">
+             </div>
+    
+        </li>
+    </ul>
+
+<ul>
+    <li *ngFor="let p of posts">
+    userId= {{p.userId}} <br>
+    id=  {{p.id}} <br>
+    title= {{p.title}} <br>
+    body=  {{p.body}} <br>
+    </li>
+
+</ul>
+

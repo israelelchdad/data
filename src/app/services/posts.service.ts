@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Post } from 'src/app/model/post';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
+import { post } from 'selenium-webdriver/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { Observable } from 'rxjs/internal/Observable';
 export class PostsService {
   private api='https://jsonplaceholder.typicode.com/posts/'
   private usersapi='https://jsonplaceholder.typicode.com/posts/?userId=#'
-
+  private apii= 'https://jsonplaceholder.typicode.com/posts/?id=90'
  selectedPost:Post
 
   constructor(private http:HttpClient) { }
@@ -18,4 +19,12 @@ export class PostsService {
     return this.http.get<Post[]>(this.api)
 
   }
+  gettenlastpost():Observable<Post[]>{
+    for (let index = 91; index <=100; index++) {
+      this.apii+="&id="+index
+      
+    }
+    return this.http.get<Post[]>(this.apii)
+    
+ }
 }
