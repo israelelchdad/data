@@ -1,16 +1,18 @@
 <p>homepage</p>
 
-<ul>
-        <li  *ngFor="let phot of photos" >
+<ul class="ulone">
+        <li class="lione"  *ngFor="let phot of photos" >
            
-             <div> {{phot.id}}-{{phot.title}}
+            
             <img src="{{phot.url}}" alt="">
-             </div>
+            <div class="divone"> {{phot.id}}-{{phot.title}}  </div>
+           
     
         </li>
     </ul>
 
 <ul>
+    <br> <br> <br> <br> <br>  <br> <br> <br> <br> <br> <br>
     <li *ngFor="let p of posts">
     userId= {{p.userId}} <br>
     id=  {{p.id}} <br>

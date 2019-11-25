@@ -9,8 +9,8 @@ import { HederComponent } from 'src/app/general/heder/heder.component';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user:string
-  pass:number
+  user:string="israel elchdad"
+  pass:number=123456789
   // ,public h:HederComponent
 
   constructor(public loc:LocationService,) { }

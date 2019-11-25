@@ -20,5 +20,16 @@ export class HomepageComponent implements OnInit {
     this.phot.gettenlastphotos().subscribe(data=>this.photos=data)
 
   }
+   index=0;
+   maxindex=9;
+   picture() {
+    
+    let one= document.querySelectorAll('.lione')[this.index]
+    one.className="shoo";
+
+    
+  }
+  
 
 }
+
