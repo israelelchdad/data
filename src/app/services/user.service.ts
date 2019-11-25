@@ -9,8 +9,10 @@ import { User } from '../model/user';
 export class UserService {
   users:User[]=[]
   corentuser:User
+  
+
   private api='https://jsonplaceholder.typicode.com/users/'
-  private apii='https://jsonplaceholder.typicode.com/users/?id='
+  private apii='https://jsonplaceholder.typicode.com/users/'
 
   constructor(private http:HttpClient) {
   
@@ -21,7 +23,8 @@ export class UserService {
 
   }
   setcorentuser(numb:number):Observable<User>{
-   this.apii+=numb;
-   return this.http.get<User>(this.apii)
+   console.log('number=',numb)
+   return this.http.get<User>(this.apii+numb)
   }
+  
 }

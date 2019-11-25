@@ -1,4 +1,11 @@
 <p>todo works!</p>
+
+<select name="" id="">
+
+  <option value="mytodo">my todo</option>
+  <option value="alltodo">all todo</option>
+ </select>
+ <button (click)="gettodosfromselect()"> get</button>
 <ul>
     <li *ngFor= "let t of todos">
    userId={{t.userId}} <br>

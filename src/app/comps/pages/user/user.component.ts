@@ -11,11 +11,14 @@ export class UserComponent implements OnInit {
   users:User[]=[]
 
   constructor(public svc:UserService) {
+   
   
    }
 
   ngOnInit() {
     this.svc.getusers().subscribe(data=> this.users=data)
-  }
+   }
+
+  
 
 }
