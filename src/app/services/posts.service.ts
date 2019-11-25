@@ -10,7 +10,7 @@ import { post } from 'selenium-webdriver/http';
 export class PostsService {
   private api='https://jsonplaceholder.typicode.com/posts/'
   private usersapi='https://jsonplaceholder.typicode.com/posts/?userId=#'
-  private apii= 'https://jsonplaceholder.typicode.com/posts/?id=90'
+  private apii= 'https://jsonplaceholder.typicode.com/posts/'
  selectedPost:Post
 
   constructor(private http:HttpClient) { }
@@ -20,8 +20,9 @@ export class PostsService {
 
   }
   gettenlastpost():Observable<Post[]>{
+    this.apii+='?'
     for (let index = 91; index <=100; index++) {
-      this.apii+="&id="+index
+      this.apii+=`id=${index}&`
       
     }
     return this.http.get<Post[]>(this.apii)

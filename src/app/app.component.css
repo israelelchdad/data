@@ -1,0 +1,9 @@
+app-login{
+    position: absolute;
+    left:30% ;
+    top: 20%;
+    border: 2px;
+    border: solid;
+    background-color: aqua;
+    padding: 100px;
+}

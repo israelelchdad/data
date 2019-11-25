@@ -11,13 +11,21 @@
         </li>
     </ul>
 
-<ul>
-    <br> <br> <br> <br> <br>  <br> <br> <br> <br> <br> <br>
+<ul class="ultow">
+ 
     <li *ngFor="let p of posts">
-    userId= {{p.userId}} <br>
-    id=  {{p.id}} <br>
-    title= {{p.title}} <br>
-    body=  {{p.body}} <br>
+        userId= {{p.userId}} <br>
+        id=  {{p.id}} <br>
+        title= {{p.title}} <br>
+        body=  {{p.body}} <br>
+        <!-- <ul>
+             <li *ngFor ='let c of p.mycoment'>
+
+                  <div> body of coment={{c.body}}</div>
+             </li>
+
+       </ul> -->
+   
     </li>
 
 </ul>

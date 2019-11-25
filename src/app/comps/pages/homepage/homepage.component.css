@@ -13,12 +13,18 @@ img{
     position: relative;
     width: 100%;
 }
-.shoo{
-    left:0%
+.lione.shoo{
+    left:0%;
 }
 .lione{
     position: absolute;
     left:-100%;
     top: 0%;
     width: 100%;
+    transition: left 2s;
+}
+.ultow{
+    margin-top: 20%
+}ul{
+    margin: 0%;
 }
