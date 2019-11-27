@@ -28,4 +28,12 @@ export class PostsService {
     return this.http.get<Post[]>(this.apii)
     
  }
+  gettpostfmyuser(numbid:number):Observable<Post[]>{
+    console.log("postservis get post run");
+    
+  return this.http.get<Post[]>(this.usersapi.replace('#',numbid.toString()))
+
+
+}
+
 }

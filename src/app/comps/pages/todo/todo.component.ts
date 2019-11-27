@@ -20,14 +20,12 @@ export class TodoComponent implements OnInit {
   gettodosfromselect(){
    let sel= document.querySelector('select').value
    console.log(sel)
-   if(sel=='mytodo'){
-   this.getmytodo()
-   }
-   if(sel=='alltodo'){
-     console.log("iiii");
-     this.getalltodo()
+
+   this.svc.gettodoofmyuser(+sel).subscribe(d=>{
+     this.todos=d
+   })
+
     }
-  }
    getmytodo(){
      this.svc.gettodoofmyuser(this.usersvc.corentuser.id).subscribe(data=>this.todos=data)
 

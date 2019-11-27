@@ -11,22 +11,25 @@ import { UserService } from '../../../services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user:string="israel elchdad"
-  pass:number=123456789
+  user:string
+  pass:number
   
 
   constructor(public loc:LocationService,public usesvs:UserService) { }
 
   ngOnInit() {
-    // setTimeout(() => {
-    //   this.login()
-      
-    // }, 6000);
+    
   }
   login(){
    let numuser=Math.floor((Math.random()*10)+1)
    console.log(numuser)
-  this.usesvs.setcorentuser(numuser).subscribe(data=>this.usesvs.corentuser=data)
+   this.usesvs.setcorentuser(numuser).subscribe(data=>{
+    this.usesvs.corentuser=data;
+    this.user=this.usesvs.corentuser.name;
+  })
+   
+   
+  
     // console.log(this.usesvs.corentuser.id)
     this.loginserver(this['user'],this['pass'])
     .subscribe(data=>{

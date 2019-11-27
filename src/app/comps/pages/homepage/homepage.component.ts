@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PostsService } from 'src/app/services/posts.service';
 import { Post } from 'src/app/model/post';
 import { Photos } from 'src/app/model/photos';
@@ -10,16 +10,19 @@ import { CommentService } from '../../../services/comment.service';
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
-export class HomepageComponent implements OnInit {
+export class HomepageComponent implements OnInit , OnDestroy {
+ 
   posts:Post[]=[]
   photos:Photos[]=[]
   index=0;
   maxindex=9;
+  numberofinterval:number
  
 
   constructor(public pos:PostsService,public phot:PhotosService,public coms:CommentService) {
     
     this.setinterval1();
+
     
    }
 
@@ -61,8 +64,15 @@ export class HomepageComponent implements OnInit {
     
   }
   setinterval1(){
-  window.setInterval(()=>{this.chengclass()},3000)
+   this.numberofinterval=window.setInterval(()=>{this.chengclass()},3000)
+   console.log(this.numberofinterval);
+   
   }
+  ngOnDestroy(){
+    
+    clearInterval(this.numberofinterval)
+  }
+  
   
   
 

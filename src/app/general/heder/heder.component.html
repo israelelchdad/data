@@ -7,7 +7,7 @@
             <li (click)='loc.chngeloc("comment")' [ngClass]="loc.location=='comment'?'active':''">comment</li>
             <li (click)='loc.chngeloc("user")' [ngClass]="loc.location=='user'?'active':''">user</li>
             <li (click)='loc.chngeloc("photos")' [ngClass]="loc.location=='photos'?'active':''">photos</li>
-            <li>welcom   {{user}}</li>
+            <li *ngIf="user">welcom   {{user}}</li>
        </ul>
 
 </div>

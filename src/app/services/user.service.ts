@@ -26,5 +26,9 @@ export class UserService {
    console.log('number=',numb)
    return this.http.get<User>(this.apii+numb)
   }
+  getuserone(numb:number):Observable<User>{
+    console.log('number=',numb)
+    return this.http.get<User>(this.apii+numb)
+   }
   
 }
